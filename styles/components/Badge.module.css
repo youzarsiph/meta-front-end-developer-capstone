@@ -1,0 +1,11 @@
+.badge {
+  @apply inline-block rounded-full border-2 px-4 py-1 text-xs font-bold tracking-wide shadow-sm;
+}
+
+.green {
+  @apply border-lime-800 bg-lime-700 text-white dark:border-lime-700 dark:bg-lime-600;
+}
+
+.yellow {
+  @apply border-yellow-500 bg-yellow-400 text-black;
+}

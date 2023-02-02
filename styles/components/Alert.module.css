@@ -1,0 +1,31 @@
+.container {
+  @apply relative mb-4 flex items-center gap-4 rounded-xl border-2 p-4 shadow-lg dark:text-white;
+}
+
+.text {
+  @apply m-0 font-bold tracking-wide;
+}
+
+.invisible {
+  @apply hidden;
+}
+
+.green {
+  @apply border-lime-700 dark:border-lime-600;
+}
+
+.yellow {
+  @apply border-yellow-500;
+}
+
+.btn {
+  @apply absolute right-4 flex h-8 w-8 items-center justify-center rounded border-2 border-transparent focus:ring-8 active:scale-95;
+}
+
+.green .btn {
+  @apply focus:border-lime-700 focus:ring-lime-600 focus:ring-opacity-50;
+}
+
+.yellow .btn {
+  @apply focus:border-yellow-500 focus:ring-yellow-400 focus:ring-opacity-50;
+}
