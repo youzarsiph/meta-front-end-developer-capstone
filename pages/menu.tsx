@@ -7,14 +7,14 @@ import styles from "../styles/Home.module.css";
 
 export default function Menu() {
   let menu = [
+    { name: "Salad", url: "salad.jpg", price: 5 },
+    { name: "Pasta", url: "pasta.jpg", price: 10 },
+    { name: "Kebab", url: "Grill_B.jpg", price: 30 },
+    { name: "Grilled meat", url: "Grill.jpg", price: 25 },
     { name: "Bruschetta", url: "Bruschetta.jpg", price: 10 },
     { name: "Greek salad", url: "Greek_salad.jpg", price: 7 },
     { name: "Grilled fish", url: "Grilled_fish.jpg", price: 20 },
     { name: "Lemon dessert", url: "Lemon_dessert.jpg", price: 15 },
-    { name: "Salad", url: "salad.jpg", price: 5 },
-    { name: "Pasta", url: "pasta.jpg", price: 10 },
-    { name: "Grilled meat", url: "Grill.jpg", price: 25 },
-    { name: "Kebab", url: "Grill_B.jpg", price: 30 },
   ];
 
   return (
@@ -69,7 +69,12 @@ export default function Menu() {
         <main className={"prose max-w-full lg:prose-lg"}>
           <Hero />
           <section className="pb-4">
-            <h1 className="text-lime-700 dark:text-lime-600">Menu</h1>
+            <h1
+              data-testid="heading"
+              className="text-lime-700 dark:text-lime-600"
+            >
+              Menu
+            </h1>
             <div className="grid gap-4 lg:grid-cols-2">
               {menu.map((item) => {
                 return <MenuItem key={item.name} item={item} />;

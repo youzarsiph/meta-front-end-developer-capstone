@@ -84,7 +84,12 @@ export default function About() {
       <div className={styles.container}>
         <main className={"prose max-w-full lg:prose-lg"}>
           <Hero />
-          <h1 className="text-lime-700 dark:text-lime-600">About Us</h1>
+          <h1
+            data-testid="heading"
+            className="text-lime-700 dark:text-lime-600"
+          >
+            About Us
+          </h1>
           <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {items.map((item) => {
               return (

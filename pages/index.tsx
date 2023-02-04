@@ -9,15 +9,15 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const specials = [
-    { name: "Lemon dessert", url: "Lemon_dessert.jpg", price: 15 },
     { name: "Bruschetta", url: "Bruschetta.jpg", price: 10 },
+    { name: "Lemon dessert", url: "Lemon_dessert.jpg", price: 15 },
   ];
 
   const items = [
     { name: "Salad", url: "salad.jpg", price: 5 },
     { name: "Pasta", url: "pasta.jpg", price: 10 },
-    { name: "Grilled meat", url: "Grill.jpg", price: 25 },
     { name: "Kebab", url: "Grill_B.jpg", price: 30 },
+    { name: "Grilled meat", url: "Grill.jpg", price: 25 },
   ];
 
   return (
@@ -72,7 +72,10 @@ export default function Home() {
         <main className={"prose max-w-full lg:prose-lg"}>
           <Hero />
           <section className="mb-4">
-            <h1 className="text-lime-700 dark:text-lime-600">
+            <h1
+              data-testid="specials"
+              className="text-lime-700 dark:text-lime-600"
+            >
               Specials of This Week
             </h1>
             <div className="grid gap-4 lg:grid-cols-2">
@@ -82,7 +85,7 @@ export default function Home() {
             </div>
           </section>
           <section>
-            <h1 className="text-lime-700 dark:text-lime-600">
+            <h1 data-testid="menu" className="text-lime-700 dark:text-lime-600">
               Explore Our Menu
             </h1>
             <div className="mb-4 grid items-center gap-4 lg:grid-cols-2">

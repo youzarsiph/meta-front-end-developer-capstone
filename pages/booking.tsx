@@ -57,11 +57,17 @@ export default function Booking() {
       <div className={styles.container}>
         <main className={"prose max-w-full lg:prose-lg"}>
           <Hero />
-          <h1 className="text-lime-700 dark:text-lime-600">Reserve a Table</h1>
+          <h1
+            data-testid="heading"
+            className="text-lime-700 dark:text-lime-600"
+          >
+            Reserve a Table
+          </h1>
           {show && <Alert label="Success">Reservation Complete!</Alert>}
           <div className="grid gap-8 lg:grid-cols-2">
             <form
               method="post"
+              data-testid="form"
               onSubmit={(event) => {
                 event.preventDefault();
                 setShow(!show);
